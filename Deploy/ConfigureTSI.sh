@@ -17,7 +17,7 @@ domainNameString=$(az ad signed-in-user show --query 'userPrincipalName' -o tsv)
 IFS='@' read -ra my_array <<< $domainNameString
 domainName=${my_array[1]}
 
-adAppName='P15-TSI-AD-App'-"$subscriptionId"
+adAppName='Monitoring-TSI-AD-App'-"$subscriptionId"
 
 servicePrincipalAppId=$(az ad app list --all --query '[].{AppId:appId}' --display-name $adAppName -o tsv)
 if [ -z $servicePrincipalAppId ]; then
