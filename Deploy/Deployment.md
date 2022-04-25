@@ -11,9 +11,6 @@
 Some Azure services require additional settings, such as permission and access control. This deployment is run by a script in Cloud Shell.
 
 1. Launch Cloud Shell  
-
-    Open a new browser tab or window, then navigate to <https://shell.azure.com>
-
-    <a href="https://shell.azure.com" target="_blank"><img src="./media/launchcloudshell.png"/></a>
+<a href="https://shell.azure.com" target="_blank"><img src="./media/launchcloudshell.png"/></a>
 
 ## Congrats, the IoT-Monitoring System is Online :)
