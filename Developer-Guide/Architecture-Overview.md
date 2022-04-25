@@ -1,6 +1,6 @@
-# Open Platform Architecture Overview
+# Architecture Overview
 
-Open Platform is consist of multiple Azure services and configurations/settings to :
+The Architecture consists of multiple Azure services and configurations/settings to :
 
 - Enable Ready to go solution
 - Provision devices using Device Provisioning Service
@@ -43,9 +43,9 @@ IoT solutions are built with various Azure services.  Typically IoT solution arc
 
 ![IoT Application Structure](media/IoT-Application-Structure.png)
 
-### Open Platform Design Principle
+### Design Principle
 
-Considering IoT application structure pattern explained above, Open Platform is designed with 3 classes of components.
+Considering IoT application structure pattern explained above, it is designed with 3 classes of components.
 
 - **Ready-to-Run**  
 Every IoT solution requires a set of components/features to be functional.  For example, all IoT solutions have devices connected, data to be ingested.  Open Platform is ready to accept data from IoT devices.
@@ -56,9 +56,9 @@ Each IoT solution requires some level of customization, however, these IoT solut
 - **Custom Components**  
 Components that cannot be pre-configured.  However, Open Platform attempts to make it easy to add these components.  For example, each IoT solution analyzes data based on their goals and requirements, type of data, and format of data.  
 
-## Open Platform Design Overview
+## Design Overview
 
-Open Platform designed is based on typical IoT use cases.  They are divided into following categories  
+The System designed is based for typical IoT use cases.  They are divided into following categories  
 
 - IoT Device Management  
     Device provisioning and device management
@@ -81,18 +81,18 @@ Typically IoT device management involves :
 - Updates and maintenance
 - Device lifecycle management
 
-Open Platform deploys and configures :
+The system deploys and configures :
 
 - Azure IoT Hub
 - Device Provisioning Service (DPS)
 - Event Grid
 
-Open Platform provides examples on :
+The system provides examples on :
 
 - A web site to interact with IoT Hub to perform device management tasks
 - Route device management events from IoT Hub to the web site
 
-More on IoT Device Management : [Open Platform Developer Guide : IoT Device Management](IoT-Device-Management.md)
+More on IoT Device Management : [IoT Device Management](IoT-Device-Management.md)
 
 ![Device Management](media/DeviceManagement.png)
 
@@ -117,7 +117,7 @@ Open Platform provides examples on :
 - Route device data, telemetry and events, for data processing
 - Route device management events
 
-More on Data Plumbing : [Open Platform Developer Guide : Data Ingestion and Data Pipeline](Data-Ingestion-Data-Pipeline.md)
+More on Data Plumbing : [Data Ingestion and Data Pipeline](Data-Ingestion-Data-Pipeline.md)
 
 ![Data Plumbing](media/DataPlumbing.png)
 
@@ -132,18 +132,18 @@ Examples of data processing are :
 - Taking actions
 - Modifying or combining
 
-Open Platform deploys and configures :
+The system deploys and configures :
 
 - Event Hubs
 - Event Grid
 - Azure Functions
 - Time Series Insights
 
-Open Platform provides examples on :
+It provides examples on :
 
 - Receiving and processing telemetry data in Azure Functions
 
-More on Data Pipeline : [Open Platform Developer Guide : Data Ingestion and Data Pipeline](Data-Ingestion-Data-Pipeline.md)
+More on Data Pipeline : [Data Ingestion and Data Pipeline](Data-Ingestion-Data-Pipeline.md)
 
 ![Data Pipeline](media/DataPipeline.png)
 
@@ -164,20 +164,20 @@ Open Platform deploys and configures :
 - Time Series Insights
 - Endpoints in various services
 
-Open Platform provides examples on :
+It provides examples on :
 
 - A web site that can visualize IoT telemetry data stored in Time Series Insights
 
-More on Data Storage : [Open Platform Developer Guide : Data Storage](Data-Storage.md)
+More on Data Storage : [Data Storage](Data-Storage.md)
 
 ![Data Storage](media/DataStorage.png)
 
 ## UX + UI
 
 User experience (UX) is often provided through User Interface (UI).  For example a web site to host a dashboard, mobile app to receive notification, or a desktop application to input data.  
-UI components are highly dependent on UX the solution wants to provide, use cases for the solution, and type of users.  Therefore, Open Platform exhibits some of UIs as examples through deploying and configuring a few Azure services.  
+UI components are highly dependent on UX the solution wants to provide, use cases for the solution, and type of users.  Therefore, the system exhibits some of UIs as examples through deploying and configuring a few Azure services.  
 
-Open Platform deploys and configures :
+The system deploys and configures :
 
 - App Service
 - Web App
@@ -186,7 +186,7 @@ Open Platform deploys and configures :
 - Time Series Insights
 - SignalR
 
-Open Platform provides examples on :
+The system provides examples on :
 
 - A web site to :  
 
@@ -194,8 +194,6 @@ Open Platform provides examples on :
   - Receive real-time notification
   - Display map
 
-More on UX and UI : [Open Platform Developer Guide : User Experience and User Interface](UX+UI.md)
+More on UX and UI : [User Experience and User Interface](UX+UI.md)
 
 ![UX + UI](media/UX+UI.png)
-
-[Project 15 from Microsoft - Open Platform](../README.md)
