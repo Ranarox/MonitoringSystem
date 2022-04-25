@@ -18,7 +18,7 @@ This document walks through deployment of Project 15 from Microsoft Open Platfor
 
 Click **Deploy to Azure** button below  
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2FGHSAT0AAAAAABT5EJPZKBQJLVBKQXF5GRMCYTGXHBA%40raw.githubusercontent.com%2FFabianKortum%2FMonitoringSystem%2Fmaster%2FDeploy%2Fazuredeploy.json" target="_blank"><img src="deploy-to-azure.svg"/></a>
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FFabianKortum%2FMonitoringSystem%2Fmaster%2FDeploy%2Fazuredeploy.json?login=FabianKortum&tolen=GHSAT0AAAAAABT5EJPZKBQJLVBKQXF5GRMCYTGXHBA" target="_blank"><img src="deploy-to-azure.svg"/></a>
 
 > [!TIP]  
 > Right click the button below and select **Open link in new tab** or **Open lin in new window**
