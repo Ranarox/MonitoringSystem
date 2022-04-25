@@ -12,7 +12,7 @@
       "maxLength": 12
     },
     "AzureDigitalTwins": {
-      "defaultValue": false,
+      "defaultValue": true,
       "type": "bool",
       "metadata": {
         "description": "True to include Azure Digital Twins"
@@ -28,15 +28,15 @@
     },
     "location": "[resourceGroup().location]",
     "script": {
-      "tsi": "https://raw.githubusercontent.com/microsoft/project15/master/Deploy/ConfigureTSI.sh"
+      "tsi": "https://raw.githubusercontent.com/FabianKortum/MonitoringSystem/master/Deploy/ConfigureTSI.sh"
     },
     "iothub": {
-      "name": "[concat('P15-IoTHub-', parameters('UniqueID'))]",
-      "eventHubsCG": "[concat('P15-IoTHub-', parameters('UniqueID'), '/events/eventHubsCG')]",
+      "name": "[concat('Monitoring-IoTHub-', parameters('UniqueID'))]",
+      "eventHubsCG": "[concat('Monitoring-IoTHub-', parameters('UniqueID'), '/events/eventHubsCG')]",
       "systemTopic": "IoTHubSystemTopic"
     },
     "eventHubs": {
-      "nameSpace": "[concat('P15-EventHubs-', parameters('UniqueID'))]",
+      "nameSpace": "[concat('Monitoring-EventHubs-', parameters('UniqueID'))]",
       "name": "devicetelemetryhub",
       "cgFunctions": "telemetry-functions-cg",
       "cgTsi": "telemetry-tsi-cg",
@@ -44,26 +44,26 @@
       "ruleSend": "TelemetrySendRule"
     },
     "webApp": {
-      "hostingPlan": "[concat('P15-HostingPlan-', parameters('UniqueID'))]",
-      "functionsName": "[concat('P15-Functions-', parameters('UniqueID'))]",
-      "webappName": "[concat('P15-Portal-', parameters('UniqueID'))]",
-      "webappUrl": "[toLower(concat('https://', 'P15-Portal-', parameters('UniqueID'), '.azurewebsites.net'))]"
+      "hostingPlan": "[concat('Monitoring-HostingPlan-', parameters('UniqueID'))]",
+      "functionsName": "[concat('Monitoring-Functions-', parameters('UniqueID'))]",
+      "webappName": "[concat('Monitoring-Portal-', parameters('UniqueID'))]",
+      "webappUrl": "[toLower(concat('https://', 'Monitoring-Portal-', parameters('UniqueID'), '.azurewebsites.net'))]"
     },
-    "storageName": "[toLower(concat('p15stor', parameters('UniqueID')))]",
-    "signalrName": "[concat('P15-SignalR-', parameters('UniqueID'))]",
-    "dpsName": "[concat('P15-DPS-', parameters('UniqueID'))]",
+    "storageName": "[toLower(concat('monitoringstor', parameters('UniqueID')))]",
+    "signalrName": "[concat('Monitoring-SignalR-', parameters('UniqueID'))]",
+    "dpsName": "[concat('Monitoring-DPS-', parameters('UniqueID'))]",
     "tsi": {
-      "environment": "[concat('P15-TSI-', parameters('UniqueID'))]",
+      "environment": "[concat('Monitoring-TSI-', parameters('UniqueID'))]",
       "location": "westus2",
       "eventSource": "TSI-EventHubs"
     },
-    "mapName": "[concat('P15-MAP-', parameters('UniqueID'))]",
+    "mapName": "[concat('Monitoring-MAP-', parameters('UniqueID'))]",
     "PrivateModelRepo": {
       "url": "https://raw.githubusercontent.com/daisukeiot/iot-plugandplay-models/",
       "branch": "privatemodels"
     },
     "adt": {
-      "name": "[concat('P15-ADT-', parameters('UniqueID'))]",
+      "name": "[concat('Monitoring-ADT-', parameters('UniqueID'))]",
       "location": "westus2",
       "identity": "functionsidentity",
       "roleId": "[resourceId('Microsoft.Authorization/roleDefinitions', 'bcd981a7-7f74-457b-83e1-cceb9e632ffe')]"
