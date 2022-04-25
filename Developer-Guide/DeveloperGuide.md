@@ -1,4 +1,4 @@
-# Open Platform Developer Guide
+# Developer Guide
 
 1. Architecture Overview
 
@@ -23,6 +23,3 @@
 1. Realtime Analytics with Azure Stream Analytics
 
     Coming Soon!
-
-[Project 15 from Microsoft | Open Platform](../README.md)
-
