@@ -12,14 +12,14 @@
       "maxLength": 12
     },
     "AzureDigitalTwins": {
-      "defaultValue": false,
+      "defaultValue": true,
       "type": "bool",
       "metadata": {
         "description": "True to include Azure Digital Twins"
       }
     },
     "DevelopmentEnvironment": {
-      "defaultValue": false,
+      "defaultValue": true,
       "type": "bool",
       "metadata": {
         "description": "True to set up development environment with free SKUs.  Note: quotas and limintations apply."
@@ -28,7 +28,7 @@
   },
   "variables": {
     "envTag": "v0.9",
-    "prefix" : "[if(bool(parameters('DevelopmentEnvironment')), 'P15Dev', 'P15')]",
+    "prefix" : "[if(bool(parameters('DevelopmentEnvironment')), 'MonitoringDev', 'Monitoring')]",
     "gitRepo": {
       "webApp": "https://github.com/microsoft/project15-openplatform-webapp.git",
       "webAppBranch": "v0.9",
@@ -40,12 +40,12 @@
       "apiVersion": "2021-04-01"
     },
     "script": {
-      "tsi": "https://raw.githubusercontent.com/microsoft/project15/master/Deploy/ConfigureTSI.sh"
+      "tsi": "https://raw.githubusercontent.com/FabianKortum/MonitoringSystem/master/Deploy/ConfigureTSI.sh"
     },
     "iotHub": {
       "name": "[concat(variables('prefix'), '-IoTHub-', parameters('UniqueID'))]",
       "apiVersion": "2021-03-31",
-      "eventHubsCG": "[concat('P15-IoTHub-', parameters('UniqueID'), '/events/eventHubsCG')]",
+      "eventHubsCG": "[concat('Monitoring-IoTHub-', parameters('UniqueID'), '/events/eventHubsCG')]",
       "systemTopic": "IoTHubSystemTopic",
       "sku": "[if(parameters('DevelopmentEnvironment'), 'F1', 'S1')]"
     },
