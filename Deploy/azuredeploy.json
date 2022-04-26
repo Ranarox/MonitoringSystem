@@ -40,7 +40,7 @@
       "apiVersion": "2021-04-01"
     },
     "script": {
-      "tsi": "https://raw.githubusercontent.com/FabianKortum/MonitoringSystem/master/Deploy/ConfigureTSI.sh?login=FabianKortum&token=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"
+      "tsi": "https://raw.githubusercontent.com/FabianKortum/MonitoringSystem/master/Deploy/ConfigureTSI.sh"
     },
     "iotHub": {
       "name": "[concat(variables('prefix'), '-IoTHub-', parameters('UniqueID'))]",
