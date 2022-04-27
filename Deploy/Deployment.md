@@ -1,6 +1,6 @@
 ## 1. Open ARM Template Deployment
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FFabianKortum%2FMonitoringSystem%2Fmaster%2FDeploy%2Fazuredeploy.json?login=FabianKortum&tolen=GHSAT0AAAAAABT5EJPZKBQJLVBKQXF5GRMCYTGXHBA" target="_blank"><img src="deploy-to-azure.svg"/></a>
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FFabianKortum%2FMonitoringSystem%2Fmaster%2FDeploy%2Fazuredeploy.json" target="_blank"><img src="deploy-to-azure.svg"/></a>
 
 > [!NOTE] - Turn on `Development Environment` option to deploy using Free SKU (quotas and limitations apply).
 
