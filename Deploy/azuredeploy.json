@@ -49,7 +49,6 @@
       "systemTopic": "IoTHubSystemTopic",
       "sku": "[if(parameters('DevelopmentEnvironment'), 'F1', 'S1')]"
     },
-    echo "1"
     "iotHubSku": {
       "F1": {
         "skuName": "F1",
@@ -143,7 +142,6 @@
       "eventSource": "TSI-EventHubs",
       "sku": "L1"
     },
-echo "2"
     "tsiSku": {
       "L1": {
         "skuName": "L1"
@@ -310,7 +308,6 @@ echo "2"
           }
         },
         {
-          echo "3"
           "name": "[variables('eventHubs').name]",
           "type": "eventhubs",
           "apiVersion": "[variables('eventhubs').apiVersion]",
